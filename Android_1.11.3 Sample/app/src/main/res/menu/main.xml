@@ -1,0 +1,24 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_new_fast_mock"
+        android:title="Fast Mock">
+    </item>
+
+    <item
+        android:id="@+id/action_new_slow_mock"
+        android:title="Slow Mock">
+    </item>
+
+    <item
+        android:id="@+id/action_new_stop_trip"
+        android:title="Stop Trip">
+    </item>
+
+</menu>
+
+

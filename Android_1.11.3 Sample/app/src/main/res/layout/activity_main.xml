@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#aaffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="10"
+        android:layout_marginTop="20dp">
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:layout_centerHorizontal="true" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pbLoading"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/scrollView1">
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/pbLoading"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="24.44"
+                android:background="#ffffffff"
+                android:inputType="textMultiLine"
+                android:scrollbars="none"
+                android:textColor="@android:color/black"
+                android:textSize="10dp" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

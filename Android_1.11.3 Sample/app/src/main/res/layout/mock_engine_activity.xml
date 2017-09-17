@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_alignParentBottom="true"
+        android:background="#d3d3d3"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/startMock"
+            android:textColor="@android:color/holo_blue_bright"
+            android:text="@string/start_mock"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/cancelMock"
+            android:text="@string/cancel"
+            android:layout_marginLeft="2dp"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_above="@id/bottomView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:background="#ffffff"
+            android:padding="20dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Select Mock Files"
+            android:textColor="#000000"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#d3d3d3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="Mock Motion Path:"
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/chooseMotionFile"
+                android:textAllCaps="false"
+                android:padding="5dp"
+                android:text="@string/choose_file"
+                android:background="#d3d3d3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
+
+            <EditText
+                android:id="@+id/motionFileTextView"
+                android:textColor="#696969"
+                android:textSize="15sp"
+                android:padding="6dp"
+                android:gravity="center_vertical"
+                android:hint="@string/no_files_chosen"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/edittext_background"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="Mock Location Path:"
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/chooseLocationFile"
+                android:textAllCaps="false"
+                android:padding="5dp"
+                android:text="@string/choose_file"
+                android:background="#d3d3d3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
+
+            <EditText
+                android:id="@+id/locationFileTextView"
+                android:textColor="#696969"
+                android:textSize="15sp"
+                android:padding="6dp"
+                android:gravity="center_vertical"
+                android:hint="@string/no_files_chosen"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/edittext_background"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_background"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Switch
+                android:id="@+id/enableFastMocking"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable Fast Mocking"
+                android:ems="40"/>
+            <View
+                android:background="#d3d3d3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.85dp"/>
+
+            <LinearLayout
+                android:id="@+id/cadenceLayout"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <TextView
+                    android:background="#f1f1f1"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:text="Enter Cadence Value (sec):\n(Ranges from 0.10 to 10.00)"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"/>
+
+                <View
+                    android:background="#d3d3d3"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:id="@+id/cadenceEditText"
+                    android:text="0.3"
+                    android:textColor="#696969"
+                    android:textSize="15sp"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:maxLength="10"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_background"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <TextView
+                android:background="#f1f1f1"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="Mock Repeat Count:"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"/>
+
+            <View
+                android:background="#d3d3d3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:id="@+id/repeatCountEditText"
+                android:text="1"
+                android:textColor="#696969"
+                android:textSize="15sp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:maxLength="2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

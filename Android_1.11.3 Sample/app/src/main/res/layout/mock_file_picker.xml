@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Repeat:"
+            android:id="@+id/repeatText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/repeatCountEditText"
+            android:layout_alignTop="@+id/repeatText"
+            android:layout_toEndOf="@+id/repeatText"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="200dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:layout_toRightOf="@+id/repeatText"
+            android:layout_marginLeft="25dp" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filePickerListView"
+            android:layout_below="@+id/repeatCountEditText"
+            android:layout_alignStart="@+id/repeatText"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp"
+            android:layout_alignLeft="@+id/repeatText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Cancel"
+            android:id="@+id/cancelTextView"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/filePickerListView"
+            android:textColor="#059256"
+            android:layout_marginRight="34dp"
+            android:layout_alignRight="@+id/filePickerListView" />
+    </RelativeLayout>
+</LinearLayout>
